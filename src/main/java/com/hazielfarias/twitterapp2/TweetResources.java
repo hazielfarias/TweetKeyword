@@ -24,7 +24,7 @@ public class TweetResources {
 	@RequestMapping(method=RequestMethod.GET)
 	public TweetResult main() throws TwitterException {
 		
-		TweetResult lista = new TweetResult("eu amo testes");
+		TweetResult lista = new TweetResult("Digite sua keyword de pesquisa aqui");
 		tweetRepository.saveAll(Arrays.asList(lista));
 	    return lista;
 	}
