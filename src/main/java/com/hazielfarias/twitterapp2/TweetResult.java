@@ -36,12 +36,17 @@ public class TweetResult implements Serializable {
 		this.keywords = keywords;
 		this.dateTime = new Date();
 		
+		String variavelDeAmbiente1 = System.getenv("CONSUMER_KEY");	
+		String variavelDeAmbiente2 = System.getenv("CONSUMER_SECRET");
+		String variavelDeAmbiente3 = System.getenv("TOKEN");
+		String variavelDeAmbiente4 = System.getenv("TOKEN_SECRET");
+	
 		ConfigurationBuilder cb = new ConfigurationBuilder();
 		cb.setDebugEnabled(true);
-		cb.setOAuthConsumerKey("G8fmFzwah9N0bmc3rihi9r6ko");
-		cb.setOAuthConsumerSecret("36jYOaqMPDpoZVtOAFtk1cagf5KxG9TAkzDOLmOJgMVWdO1ACb");
-		cb.setOAuthAccessToken("1122961205684051968-HLqWT9oEosBfU7zktpI1LzGcIQuFz4");
-		cb.setOAuthAccessTokenSecret("07XJ7AHftI0jgpHTPOrrbedjYUac7XnK6giSSIrtqKtbY");
+		cb.setOAuthConsumerKey(variavelDeAmbiente1);
+		cb.setOAuthConsumerSecret(variavelDeAmbiente2);
+		cb.setOAuthAccessToken(variavelDeAmbiente3);
+		cb.setOAuthAccessTokenSecret(variavelDeAmbiente4);
 		
 		TwitterFactory tf = new TwitterFactory(cb.build());
 		Twitter twitter = tf.getInstance();
