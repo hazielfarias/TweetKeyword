@@ -1,4 +1,4 @@
-package com.hazielfarias.twitterapp2;
+package com.hazielfarias.twitterapp2.resouces;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -50,13 +50,13 @@ public class TweetResult implements Serializable {
 		
 		TwitterFactory tf = new TwitterFactory(cb.build());
 		Twitter twitter = tf.getInstance();
-		Query query = new Query("eu amo");
+		Query query = new Query(keywords);
 	    QueryResult result = twitter.search(query);
 	    List<TweetDados> lista = new ArrayList<>();
 	    
-	   int x =0;
-	   String url;
-	   TweetDados a;
+	    int x =0;
+	    String url;
+	    TweetDados a;
 	   		while (x<=10) {
 	    	url= "https://twitter.com/" + result.getTweets().get(x).getUser().getScreenName() + "/status/" + result.getTweets().get(x).getId();
 	    	a = new TweetDados(result.getTweets().get(x).getCreatedAt(),result.getTweets().get(x).getId(),result.getTweets().get(x).getText(),url);

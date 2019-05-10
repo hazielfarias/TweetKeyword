@@ -1,4 +1,4 @@
-package com.hazielfarias.twitterapp2;
+package com.hazielfarias.twitterapp2.resouces;
 
 import java.util.Date;
 

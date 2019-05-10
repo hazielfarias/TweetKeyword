@@ -1,4 +1,4 @@
-package com.hazielfarias.twitterapp2;
+package com.hazielfarias.twitterapp2.resouces;
 
 
 
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hazielfarias.twitterapp2.repository.TweetRepository;
 
 import twitter4j.TwitterException;
 
@@ -24,7 +25,7 @@ public class TweetResources {
 	@RequestMapping(method=RequestMethod.GET)
 	public TweetResult main() throws TwitterException {
 		
-		TweetResult lista = new TweetResult("Digite sua keyword de pesquisa aqui");
+		TweetResult lista = new TweetResult("keyword teste");
 		tweetRepository.saveAll(Arrays.asList(lista));
 	    return lista;
 	}
