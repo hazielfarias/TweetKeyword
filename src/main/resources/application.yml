@@ -1,0 +1,10 @@
+var:
+  consumerkey: ${CONSUMER_KEY}
+  consumersecret: ${CONSUMER_SECRET}
+  token: ${TOKEN}
+  tokensecret: ${TOKEN_SECRET}
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://chiba:54321@cluster0-jpyv5.mongodb.net/tweets?retryWrites=true&w=majority
