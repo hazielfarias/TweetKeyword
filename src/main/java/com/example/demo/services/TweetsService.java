@@ -1,7 +1,7 @@
-package com.example.demo.com.example.services;
+package com.example.demo.services;
 
-import com.example.demo.com.example.demo.model.TweetData;
-import com.example.demo.com.example.demo.model.TweetResult;
+import com.example.demo.model.TweetData;
+import com.example.demo.model.TweetResult;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import twitter4j.*;

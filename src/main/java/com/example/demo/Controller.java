@@ -1,8 +1,8 @@
 package com.example.demo;
-import com.example.demo.com.example.com.example.repository.TweetsRepository;
-import com.example.demo.com.example.demo.model.Busca;
-import com.example.demo.com.example.demo.model.TweetResult;
-import com.example.demo.com.example.services.TweetsService;
+import com.example.demo.repository.TweetsRepository;
+import com.example.demo.model.Busca;
+import com.example.demo.model.TweetResult;
+import com.example.demo.services.TweetsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import twitter4j.TwitterException;
