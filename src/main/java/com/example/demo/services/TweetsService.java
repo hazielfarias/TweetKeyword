@@ -37,13 +37,16 @@ public class TweetsService {
         Twitter twitter = tf.getInstance();
         Query query = new Query(keyWords);
         QueryResult result = twitter.search(query);
-        String url= "https://twitter.com/" + result.getTweets().
-                get(id).getUser().getScreenName()
-                + "/status/"
-                + result.getTweets().get(id).getId();
-        TweetData tweet = new TweetData(result.getTweets().get(id).getCreatedAt(),result.getTweets().get(id).getId(),result.getTweets().get(id).getText(),url);
-        return tweet;
+        try {
+            String url= "https://twitter.com/" + result.getTweets().
+                    get(id).getUser().getScreenName()
+                    + "/status/"
+                    + result.getTweets().get(id).getId();
+            return new TweetData(result.getTweets().get(id).getCreatedAt(),result.getTweets().get(id).getId(),result.getTweets().get(id).getText(),url);
+        } catch (Exception e) {
+            return null;
         }
+    }
 
      public TweetResult searchKeyWord (String keyWord) throws TwitterException {
 

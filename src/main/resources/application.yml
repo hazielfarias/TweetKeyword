@@ -7,4 +7,4 @@ var:
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://chiba:54321@cluster0-jpyv5.mongodb.net/tweets?retryWrites=true&w=majority
+      uri: ${MONGO_URI}
